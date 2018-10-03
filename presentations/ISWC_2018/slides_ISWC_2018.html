@@ -45,22 +45,46 @@
 
 	<section class="slide">
 		<h2>Problem statement</h2>
-		<p>Client/Server architecture, how APIs evolve?</p>
-		<p>APIs evolution happens in iterations, trying to fulfill (usually) <strong>the most common</strong> functionality
-			needed by a
-			mass of clients</p>
+		<p>Client/Server architecture</p>
+		<p>How APIs evolve?</p>
+		<p>APIs evolution happens in iterations, trying to fulfill (usually) the most common functionality needed by a mass
+			of
+			clients</p>
+
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
 		<h2>Problem statement</h2>
-		<p>In these setups, <strong>very specific</strong> functionality is <strong>hard and costly</strong> to archieve. <br />
-			Sometimes not even cost/benefit effective <br /> <br />
-			How to target the <strong>long tail</strong> of specific <br />API functionality?</p>
+		<p>Client/Server architecture</p>
+		<ol>
+			<li>
+				In these setups, <strong>very specific</strong> functionality <br />
+				is <strong>hard and costly</strong> to achieve. <br />
+				Sometimes not even cost/benefit effective
+			</li>
+		</ol>
 		<figure>
 			<img class="cover" src="diagrams/ISWC_2018/diagrams - 1.png">
 		</figure>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+	</section>
+
+	<section class="slide">
+		<h2>Problem statement</h2>
+		<p>Client/Server architecture</p>
+		<ol>
+			<li>
+				In these setups, <strong>very specific</strong> functionality <br />
+				is <strong>hard and costly</strong> to achieve. <br />
+				Sometimes not even cost/benefit effective
+			</li>
+			<li>
+				it is difficult to provide APIs that <strong>adapt to data</strong> in control of the user.
+			</li>
+		</ol>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
@@ -78,14 +102,13 @@
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
-
 	<section class="slide">
 		<h2>Related work</h2>
 		<p><strong>Hypermedia driven APIs</strong>
 			<ul>
 				<li>Functionality exposed by means of hypermedia controls</li>
-				<li>Make use of the Web architecture</li>
-				<li>Clients need to discover and know how to handle those affordances</li>
+				<li>Clients can discover the interfaces in the Web</li>
+				<li>Allows personalizing content, shaping the APIs according to the data.</li>
 			</ul>
 		</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
@@ -95,11 +118,14 @@
 	<section class="slide">
 		<h2>Approach</h2>
 		<figure>
-			<img class="cover" src="diagrams/ISWC_2018/diagrams - 3.png">
+			<img class="cover" src="diagrams/ISWC_2018/diagrams - 2.png">
 		</figure>
-		<p>Multiple (Server/Client) nodes that:<p>
+		<p>One node (personal agent) can expose<br />
+			<strong>Hypermedia APIs</strong> generated dynamically from:<p>
 				<ul>
-					<li><strong>expose</strong> functionality to others</li>
+					<li>Personal and public data</li>
+					<li>Rules and Queries</li>
+					<li>Functionality descriptors and metadata</li>
 				</ul>
 				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -110,10 +136,10 @@
 		<figure>
 			<img class="cover" src="diagrams/ISWC_2018/diagrams - 4.png">
 		</figure>
-		<p>Multiple (Server/Client) nodes that:<p>
+		<p>Multiple nodes can:<p>
 				<ul>
-					<li>expose functionality to others</li>
-					<li><strong>collect</strong> functionality from others</li>
+					<li><strong>Expose</strong> and <strong>collect</strong> functionality from others</li>
+					<li>Evolve their APIs <strong>independently</strong></li>
 				</ul>
 				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -121,63 +147,89 @@
 
 	<section class="slide">
 		<h2>Approach</h2>
-		<figure>
-			<img class="cover" src="diagrams/ISWC_2018/diagrams - 5.png">
-		</figure>
-		<p>Multiple (Server/Client) nodes that:<p>
-				<ul>
-					<li>expose functionality to others</li>
-					<li>collect functionality from others</li>
-				</ul>
-				<p>APIs are built incrementally while generating <br /> <strong>API Evolution trails</strong> <br /> used to
-					discovery of new functionality<p>
-	</section>
-
-	<section class="slide">
-		<h2>Approach</h2>
-		<p>Expectation</p>
-		<p></p>
-		<ul>
-			<li class="next">The cost of building APIs is <strong>distributed</strong> among peers</li>
-			<li class="next">APIs are built <strong>bottom up</strong>, possibly reaching higher specificity degrees</li>
-			<li class="next">Discovery of <strong>relevant functionality</strong> improved using API evolution trails</li>
-		</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Approach</h2>
-		<p>Expectation</p>
-		<p></p>
-		<ul>
-			<li>The cost of building APIs is <strong>distributed</strong> among peers</li>
-			<li>APIs are built <strong>bottom up</strong>, possibly reaching higher specificity degrees</li>
-			<li>Discovery of <strong>relevant functionality</strong> improved using API evolution trails</li>
-		</ul>
-		<p>Intuition: Other nodes with similar goals to mine, have <strong>already collected</strong> relevant functionality,
-			to find following the trails of API evolution<p>
-	</section>
-
-	<section class="slide">
-		<h2>Research Questions</h2>
-		<p>In such a setup<p>
-				<ul>
-					<li>How agents expose their API features so they can be collected by others?</li>
-					<li class="next">How can agents discover new functionality without inspecting all nodes?</li>
-					<li class="next">How can API evolution trails be represented so they are suitable for feature discovery?</li>
-					<li class="next">To what degree information derived from provenance trails influence the relevance and precision
-						of API
-						feature discovery?</li>
-				</ul>
-	</section>
-
-	<section class="slide">
-		<h2>Hypotheses</h2>
+		<p>While APIs evolve, nodes generate <br /> Web <strong>API evolution trails</strong> used to:</p>
 		<ol>
-			<li class="next">An agent can discover and gather features from others relying solely on linked data principles.</li>
-			<li class="next">It is possible to gather provenance trails to discover services of high relevance without the need
-				of a central service registry.</li>
-		</ol>
+			<li>Discover of new functionality</li>
+			<li>Do mapping between the personal data</li>
+			<p>
+				<figure>
+					<img class="cover" src="diagrams/ISWC_2018/diagrams - 5.png">
+				</figure>
+				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
+
+	<section class="slide">
+		<h2>Approach</h2>
+		<p>Expectation</p>
+		<p></p>
+		<ul>
+			<li>Nodes can <strong>tailor</strong> their APIs, adapting them to the data of a user</li>
+			<li class="next">The effort of building APIs is <strong>distributed</strong> among peers</li>
+			<li class="next">API evolution trails are then useful for <strong>bootstrapping</strong> API functionality</li>
+		</ul>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+	</section>
+
+	<section class="slide">
+		<h2>Research Question</h2>
+		<p>The central question investigated by this thesis is:</p>
+		<p>
+			How can be supported an API design process in which APIs are adequatelly adapted to the data in control of the user,
+			while interoperability between nodes is not sacrificed?
+		</p>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+	</section>
+
+	<section class="slide">
+		<h2>Research Question</h2>
+		<p>This research raises three concrete questions:</p>
+		<ol>
+			<li>..working on this</li>
+			<li>..working on this</li>
+			<li>..working on this</li>
+		</ol>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+	</section>
+
+	<section class="slide">
+		<h2>Hypothesis</h2>
+		<p>Personal agents that exchange API functionality in the Web can build APIs better adapted to the data in control of
+			the users,
+			compared with top down API design approaches used in client-server architectures</p>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+	</section>
+
+	<!-- 
+<section class="slide">
+	<h2>Research Questions</h2>
+
+The central question investigated by this thesis is:
+
+How can a concurrent API design process based on functionality-transfer be supported, 
+in which APIs are adequatelly adapted to the data in control of the user, 
+while interoperability between nodes is not sacrificed?
+
+This research raises three concrete questions that will be investigated in this work:
+
+	<p>In such a setup, and relying <strong>solely on linked data principles</strong>:<p>
+	<ul>
+		<li>How can API functionality be transfered between nodes, and still are tailored, <strong>adapted</strong> to the data of a user</li>
+		<li>How nodes can generate Hypermedia APIs, by means of collecting API functionality in the Web?</li>
+		<li>How can API functionality be exposed and collected in the Web, so it is useful to dynamically provide Hypermedia APIs?</li>
+		<li>How can agents discover new functionality without inspecting all nodes?</li>
+		<li>How can API evolution trails be represented so they are suitable for feature discovery?</li>
+		<li>To what degree information derived from provenance trails influence the relevance and precision of API feature discovery?</li>
+
+			How can the change operators be represented (as building blocks for ontology evolution) so that they are suitable for
+			the domain experts and ontology engineers? Research
+
+	</ul>
+</section> -->
 
 	<section class="slide">
 		<h2>Evaluation plan (I)</h2>
@@ -187,6 +239,8 @@
 			<li>Healthcare</li>
 			<li>E-government</li>
 		</ul>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
@@ -198,6 +252,8 @@
 			<li>Agents leave API evolution traces</li>
 			<li>Agents can use API evolution trails for discovery</li>
 		</ul>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
@@ -209,6 +265,8 @@
 			<li>Trade off analysis, comparison with Semantic Web Services</li>
 			<li>Trade off analysis, API articulation efforts</li>
 		</ul>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
@@ -221,13 +279,14 @@
 			<li>Hypermedia APIs and reasoning</li>
 			<li>Transferable Knowledge packages, personal data-spaces</li>
 		</ul>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
 		<h2>Reflections</h2>
-		<p>Bottom up approaches can be useful to reach highly specialized functionality.</p>
-		<p>Still many approaches to be explored.</p>
-
+		<p>Still many API elicitation approaches to be explored.</p>
+		<p>Bottom up approaches can be used to build APIs that adapt to data in control of the user.</p>
 	</section>
 
 	<section class="slide" id="cover">
@@ -237,7 +296,6 @@
 				<p class="author">
 					<strong><a href="http://cristianvasquez.me">Cristian Vasquez</a></strong>,
 					Twitter:<a href="https://twitter.com/cristianvasquez"><i class="fab fa-twitter"></i>@cristianvasquez</a>
-
 				</p>
 				<p class="affiliation">
 					Ghent University – imec – IDLab,
@@ -245,11 +303,15 @@
 				</p>
 			</footer>
 		</div>
+		<img src="./pictures/logo_elis.png" alt="imec" style="position: absolute; left: 0; top: 0; max-width: 240px">
+		<img src="./pictures/logo_idlab.png" alt="imec" style="position: absolute; right: 18px; top: -6px; max-width: 96px">
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
-	<footer class="badge">
-		<a href="#">Fork me in github</a>
-	</footer>
+	<!-- <footer class="badge">
+	<a href="#">Fork me in github</a>
+</footer> -->
 
 	<div class="progress"></div>
 
