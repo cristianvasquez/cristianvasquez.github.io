@@ -43,50 +43,70 @@
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
+
 	<section class="slide">
 		<h2>Problem statement</h2>
-		<p>Client/Server architecture</p>
-		<p>How APIs evolve?</p>
-		<p>APIs evolution happens in iterations, trying to fulfill (usually) the most common functionality needed by a mass
-			of
-			clients</p>
-
+		<p>Common situation</p>
+		<p>A well known Web site exposes an API to be consumed by several applications.</p>
+		<p>The API evolves in iterations, while developers are trying to satisfy the <strong>most common</strong>
+			expectations of their users</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
 		<h2>Problem statement</h2>
-		<p>Client/Server architecture</p>
-		<ol>
+		<p>Application specific APIs</p>
+		<ul>
 			<li>
-				In these setups, <strong>very specific</strong> functionality <br />
-				is <strong>hard and costly</strong> to achieve. <br />
-				Sometimes not even cost/benefit effective
+				Built top-down, following economies of scale.
 			</li>
-		</ol>
-		<figure>
-			<img class="cover" src="diagrams/ISWC_2018/diagrams - 1.png">
-		</figure>
+			<li>
+				Not necessarily tailored to the needs of a <strong>specific</strong> user.
+			</li>
+			<li>
+				To adapt to a specific user, they need access to the user's data
+			</li>
+		</ul>
+
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
-		<h2>Problem statement</h2>
-		<p>Client/Server architecture</p>
-		<ol>
-			<li>
-				In these setups, <strong>very specific</strong> functionality <br />
-				is <strong>hard and costly</strong> to achieve. <br />
-				Sometimes not even cost/benefit effective
-			</li>
-			<li>
-				it is difficult to provide APIs that <strong>adapt to data</strong> in control of the user.
-			</li>
-		</ol>
-		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
-		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+		<h2>Tailored API example</h2>
+
+		<p>Personal agent feeding <br />
+			"my taxes" application through an API<p>
+				<ul>
+					<li>A reasoner</li>
+					<li>Some rules</li>
+					<li>A query</li>
+					<li>A UI</li>
+				</ul>
+				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+				<figure>
+					<img class="cover" src="diagrams/ISWC_2018/diagrams - 07.png">
+				</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Tailored API example</h2>
+
+		<p>Personal agent feeding <br />
+			"my taxes" application through an API<p>
+				<ul>
+					<li>A reasoner</li>
+					<li>Some rules</li>
+					<li>A query</li>
+					<li>A UI</li>
+				</ul>
+				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+				<figure>
+					<img class="cover" src="diagrams/ISWC_2018/diagrams - 08.png">
+				</figure>
 	</section>
 
 	<section class="slide">
@@ -95,7 +115,7 @@
 			<ul>
 				<li>Services described with the help of agreed semantics</li>
 				<li>Usually implemented using registries</li>
-				<li>Allows complex composition of services</li>
+				<li>Allows complex composition of services and views, can be tailored to users</li>
 			</ul>
 		</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
@@ -115,17 +135,16 @@
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
+
 	<section class="slide">
 		<h2>Approach</h2>
 		<figure>
-			<img class="cover" src="diagrams/ISWC_2018/diagrams - 2.png">
+			<img class="cover" src="diagrams/ISWC_2018/diagrams - 02.png">
 		</figure>
-		<p>One node (personal agent) can expose<br />
-			<strong>Hypermedia APIs</strong> generated dynamically from:<p>
+		<p>One node (personal agent) can expose APIs <br /> generated from:<p>
 				<ul>
-					<li>Personal and public data</li>
-					<li>Rules and Queries</li>
 					<li>Functionality descriptors and metadata</li>
+					<li>Personal and public data</li>
 				</ul>
 				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -134,7 +153,7 @@
 	<section class="slide">
 		<h2>Approach</h2>
 		<figure>
-			<img class="cover" src="diagrams/ISWC_2018/diagrams - 4.png">
+			<img class="cover" src="diagrams/ISWC_2018/diagrams - 04.png">
 		</figure>
 		<p>Multiple nodes can:<p>
 				<ul>
@@ -147,13 +166,13 @@
 
 	<section class="slide">
 		<h2>Approach</h2>
-		<p>While APIs evolve, nodes generate <br /> Web <strong>API evolution trails</strong> used to:</p>
+		<p>While interfaces evolve, nodes generate <br /> Web API <strong>evolution trails</strong> used to:</p>
 		<ol>
 			<li>Discover of new functionality</li>
-			<li>Do mapping between the personal data</li>
+			<li>Discover relations between the personal data</li>
 			<p>
 				<figure>
-					<img class="cover" src="diagrams/ISWC_2018/diagrams - 5.png">
+					<img class="cover" src="diagrams/ISWC_2018/diagrams - 05.png">
 				</figure>
 				<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 				<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -165,8 +184,8 @@
 		<p></p>
 		<ul>
 			<li>Nodes can <strong>tailor</strong> their APIs, adapting them to the data of a user</li>
-			<li class="next">The effort of building APIs is <strong>distributed</strong> among peers</li>
-			<li class="next">API evolution trails are then useful for <strong>bootstrapping</strong> API functionality</li>
+			<li class="next">The effort of building Hypermedia Interfaces is <strong>distributed</strong> among peers</li>
+			<li class="next">API evolution trails are then useful for <strong>bootstrapping</strong> new interfaces</li>
 		</ul>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -176,20 +195,21 @@
 		<h2>Research Question</h2>
 		<p>The central question investigated by this thesis is:</p>
 		<p>
-			How can be supported an API design process in which APIs are adequatelly adapted to the data in control of the user,
-			while interoperability between nodes is not sacrificed?
+			How to support a process in which agent interfaces independently evolve to be adapted to the data in control of
+			the user, while interoperability between nodes is not sacrificed?
 		</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
 
 	<section class="slide">
-		<h2>Research Question</h2>
+		<h2>Research Questions</h2>
 		<p>This research raises two concrete questions:</p>
 		<ol>
 			<li>How can API functionality be transfered between nodes, while still be adapted to the data of the user?</li>
 			<li>How can API evolution trails be represented so they are suitable for feature discovery and adoption?</li>
 		</ol>
+		<p>Previously defining: What means that an API is adapted to the data of the user?</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
@@ -198,7 +218,7 @@
 		<h2>Hypothesis</h2>
 		<p>Personal agents that exchange API functionality in the Web can build APIs better adapted to the data in control of
 			the users,
-			compared with top down API design approaches used in client-server architectures</p>
+			compared with top down design of application specific API used in client-server architectures</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
@@ -220,7 +240,7 @@
 		<h3>Multi-agent simulation</h3>
 		<ul>
 			<li>Knowledge and features scattered in a network</li>
-			<li>Agents can collect artifacts from others, trying to fulfill goals</li>
+			<li>Agents can collect artifacts from others, trying to fulfill goals (or utility function)</li>
 			<li>Agents leave API evolution traces</li>
 			<li>Agents can use API evolution trails for discovery</li>
 		</ul>
@@ -244,7 +264,7 @@
 	<section class="slide">
 		<h2>Preliminary results</h2>
 		<figure>
-			<img class="cover" src="diagrams/ISWC_2018/diagrams - 6.png">
+			<img class="cover" src="diagrams/ISWC_2018/diagrams - 06.png">
 		</figure>
 		<h3>GPS4IC (Personal) Agent</h3>
 		<ul>
@@ -257,8 +277,11 @@
 
 	<section class="slide">
 		<h2>Reflections</h2>
-		<p>Still many API elicitation approaches to be explored.</p>
-		<p>Bottom-up approaches can be used to build APIs that adapt to data in control of the user.</p>
+		<p>Bottom-up Approaches</p>
+		<ul>
+			<li>Can be useful to build APIs that adapt to data in control of the user.</li>
+			<li>Complementary to other approaches.</li>
+		</ul>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
@@ -282,6 +305,24 @@
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
 	</section>
+
+	<section class="slide">
+		<h2>Support slides</h2>
+		<p>Client/Server architecture</p>
+		<ol>
+			<li>
+				In these setups, <strong>very specific</strong> functionality <br />
+				is <strong>hard and costly</strong> to achieve. <br />
+				Sometimes not even cost/benefit effective
+			</li>
+		</ol>
+		<figure>
+			<img class="cover" src="diagrams/ISWC_2018/diagrams - 01.png">
+		</figure>
+		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
+		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+	</section>
+
 
 	<div class="progress"></div>
 	<script src="scripts/shower.min.js"></script>
