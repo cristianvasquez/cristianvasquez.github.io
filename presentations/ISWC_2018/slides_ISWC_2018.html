@@ -46,27 +46,21 @@
 
 	<section class="slide">
 		<h2>Problem statement</h2>
-		<p>Common situation:</p>
-		<p>An Application specific API provides functionality to be consumed by several clients and users. Due to economies
-			of scale, they are very efficient to deliver services.</p>
-		<p>However, to provide functionality that <strong>adapts to the user</strong>, servers need to have access to
-			personal data and have it in one particular format.</p>
+		<p>Personal agent</p>
+		<ul>
+			<li>Assists the user in his daily activities</li>
+			<li>Highly adapted to the user's data</li>
+		</ul>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
-	</section>
-
-	<section class="slide">
-		<h2>Problem statement</h2>
-		<p>One way to provide high adaptability <strong>without</strong> giving access to personal data, is to use personal
-			agents.</p>
-		<p>For instance, the agent can modify the APIs responses, adapting the application behavior to the user</p>
-		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
-		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+		<footer>
+			<p>A non-invasive kind of agent is one that proxies the API responses, so it can adapt the application behavior to
+				us</p>
+		</footer>
 	</section>
 
 	<section class="slide">
 		<h2>Package driven API</h2>
-
 		<p>Personal agent feeding <br />
 			"my taxes" application through an API<p>
 				<ul>
@@ -80,6 +74,13 @@
 				<figure>
 					<img class="cover" src="diagrams/ISWC_2018/diagrams - 07.png">
 				</figure>
+				<footer>
+					<p>Starting from (personal+public) data, some rules and a reasoner the agents adds or remove data, or Hypermedia
+						controls.</p>
+					<p>All of this can constitute a knowledge package, which can be transfered through the Web. Adding new knowledge
+						can
+						result in new functionality</p>
+				</footer>
 	</section>
 
 	<section class="slide">
@@ -98,14 +99,23 @@
 				<figure>
 					<img class="cover" src="diagrams/ISWC_2018/diagrams - 08.png">
 				</figure>
+				<footer>
+					<p>For instance, when I add the subsidy package, the new rules together with with my personal finances trigger a
+						new control to apply for a subsidy<p>
+				</footer>
 	</section>
 
 	<section class="slide">
 		<h2>Problem statement</h2>
-		<p>However, packages need to be developed</p>
-		<p>Can multiple personal agents share this effort?</p>
+		<p>People's activities are varied</p>
+		<p>So it makes sense that their personal agents are configured differently</p>
+		<p>Can agents themselves help to reach <strong>appropriate personal configurations</strong>?.</p>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+		<footer>
+			<p>People's activities are different, so it makes sense their agents are configured differently.<p>
+					<p>Is not that likely that the user will develop their own personal agents</p>
+		</footer>
 	</section>
 
 
@@ -186,10 +196,14 @@
 		<ul>
 			<li>Nodes can <strong>tailor</strong> their APIs, adapting them to the data of a user</li>
 			<li class="next">The effort of building Hypermedia Interfaces is <strong>distributed</strong> among peers</li>
-			<li class="next">API evolution trails are then useful for <strong>bootstrapping</strong> new API interfaces</li>
+			<li class="next">API evolution trails are then useful for <strong>bootstrapping</strong> new configurations</li>
 		</ul>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+		<footer>
+			<p>I expect Nodes can build API configurations adapted to the data of a user.</p>
+			<p>Also my expectation is that this promotes healthy share, to enable better collaboration between users.</p>
+		</footer>
 	</section>
 
 	<section class="slide">
@@ -255,8 +269,7 @@
 		<ul>
 			<li>Demonstration of feature exposition by means of Hypermedia</li>
 			<li>Demonstration of feature discovery by means of API evolution trails</li>
-			<li>Trade off analysis, comparison with Semantic Web Services</li>
-			<li>Trade off analysis, API articulation efforts</li>
+			<li>Analysis of API articulation efforts, compared to semantic web services</li>
 		</ul>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -281,8 +294,8 @@
 		<p>Bottom-up Approaches</p>
 		<ul>
 			<li>Can be useful to build APIs that adapt to data in control of the user.</li>
-			<li>Complementary to other approaches.</li>
 			<li>Does not require giving away the data</li>
+			<li>Complementary to other approaches.</li>
 		</ul>
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
@@ -310,17 +323,23 @@
 
 	<section class="slide">
 		<h2>Support slides</h2>
+		<p>At some point, people go from mainframes to <br /> personal computers</p>
 		<ol>
 			<li>Economies of scale until to a point</li>
 			<li>There is a limit in terms of complexity</li>
 		</ol>
-		<p>We already had the experience <br />
-			when we went from mainframes to personal computer</p>
 		<figure>
 			<img class="cover" src="diagrams/ISWC_2018/diagrams - 01.png">
 		</figure>
+		<p>And also goes back.. (cloud)</p>
+
 		<img src="./pictures/logo_ughent.png" alt="Ghent University" style="position: absolute; left: 0; bottom: 0; max-width: 100px">
 		<img src="./pictures/logo_imec.png" alt="imec" style="position: absolute; left: 100px; bottom: 20px; max-width: 80px">
+		<footer>
+			<p>An Application specific API provides functionality to be consumed by several clients and users. To archive high
+				adaptation, servers define personas and put people into a category.
+				This is effective due to economies of scale, but is not what I mean by adaptation.</p>
+		</footer>
 	</section>
 
 
